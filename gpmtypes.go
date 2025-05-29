@@ -33,6 +33,7 @@ type GpmTopic struct {
 	ValueOnCreation           int64   `gorm:"type:numeric;default:0" json:"value_on_creation"`
 	GeneratorId               uint    `gorm:"type:numeric;default:0" json:"generator_id"`
 	DateStringToResolve       string  `gorm:"column:date_string_to_resolve;type:varchar(255);default:null"`
+	DateUTCString             string  `gorm:"type:varchar(32);default:null" json:"date_utc_string"`
 }
 
 // LmsrTopicOptions defines the options for a GpmTopic in the Glimpse platform.
