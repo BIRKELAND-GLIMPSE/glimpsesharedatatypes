@@ -3,7 +3,7 @@ package glimpsesharedatatypes
 // GpmTopic defines the topic structure for the Glimpse platform.
 type GpmTopic struct {
 	ID                        int64   `gorm:"primaryKey;autoIncrement" json:"id"`
-	GroupTopicID              int64   `gorm:"not null" json:"group_topic_id default "`
+	GroupTopicID              int64   `gorm:"not null" json:"group_topic_id default 0"`
 	Title                     string  `gorm:"type:varchar(255);not null;unique" json:"title"`
 	Slug                      string  `gorm:"type:varchar(255);not null" json:"slug"`
 	Description               string  `gorm:"type:text" json:"description"`
