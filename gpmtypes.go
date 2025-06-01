@@ -42,7 +42,7 @@ type LmsrTopicOptions struct {
 	TopicID          int64   `gorm:"not null" json:"topic_id"`
 	Description      string  `gorm:"type:varchar(255);not null" json:"description"`
 	Odds             float64 `gorm:"type:numeric;default:0" json:"odds"`
-	Shares           int64   `gorm:"type:numeric;default:0" json:"shares"`
-	SubsidisedShares int64   `gorm:"type:numeric;default:0" json:"subsidised_shares"`
+	Shares           float64 `gorm:"type:numeric;default:0" json:"shares"`
+	SubsidisedShares float64 `gorm:"type:numeric;default:0" json:"subsidised_shares"`
 	ImageUrl         string  `gorm:"type:text;default:''" json:"image_url"`
 }
