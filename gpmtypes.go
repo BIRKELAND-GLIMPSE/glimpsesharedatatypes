@@ -45,4 +45,5 @@ type LmsrTopicOptions struct {
 	Shares           float64 `gorm:"type:numeric;default:0" json:"shares"`
 	SubsidisedShares float64 `gorm:"type:numeric;default:0" json:"subsidised_shares"`
 	ImageUrl         string  `gorm:"type:text;default:''" json:"image_url"`
+	SeedProbability  float64 `gorm:"type:numeric;default:0" json:"seed_probability"`
 }
