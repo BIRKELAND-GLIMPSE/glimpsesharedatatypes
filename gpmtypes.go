@@ -37,6 +37,7 @@ type GpmTopic struct {
 	SymbolOne                 string  `gorm:"type:varchar(255);default:''" json:"symbol_one"`
 	SymbolTwo                 string  `gorm:"type:varchar(255);default:''" json:"symbol_two"`
 	DurationCategory          string  `gorm:"type:varchar(255);default:''" json:"duration_category"`
+	TradingViewSymbol         string  `gorm:"type:varchar(255);default:''" json:"trading_view_symbol"`
 }
 
 // LmsrTopicOptions defines the options for a GpmTopic in the Glimpse platform.
