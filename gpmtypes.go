@@ -38,6 +38,13 @@ type GpmTopic struct {
 	SymbolTwo                 string  `gorm:"type:varchar(255);default:''" json:"symbol_two"`
 	DurationCategory          string  `gorm:"type:varchar(255);default:''" json:"duration_category"`
 	TradingViewSymbol         string  `gorm:"type:varchar(255);default:''" json:"trading_view_symbol"`
+
+	IsReconciled              bool    `gorm:"not null;default:false;index" json:"is_reconciled"`
+	ReconciledAt              *int64  `gorm:"type:bigint;default:null" json:"reconciled_at"`
+	ReconciliationTxHash      *string `gorm:"type:varchar(64);default:null;index" json:"reconciliation_tx_hash"` // Bitcoin on-chain transaction ID (txid): 64 hex characters (32 bytes)
+	FinalAMMPnLMilliSats      int64   `gorm:"type:bigint;default:0" json:"final_amm_pnl_milli_sats"`
+	ReconciledAmountMilliSats int64   `gorm:"type:bigint;default:0" json:"reconciled_amount_milli_sats"`
+	ReconciledBy              *string `gorm:"type:varchar(255);default:null" json:"reconciled_by"`
 }
 
 // LmsrTopicOptions defines the options for a GpmTopic in the Glimpse platform.
